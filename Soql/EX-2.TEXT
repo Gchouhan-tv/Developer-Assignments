@@ -1,0 +1,11 @@
+1)select Name, DOB__c, Sex__c from consultant__c where LastName__c  like 's%'
+2)select  ID, Name  from consultant__c Where Education__c ='B.E'
+3)select ID , Education__c from consultant__c  
+4)select ID ,Name,(select id , name__c from positions__r) from account  || Select Name, Employer__r.Id from Position__c
+5)select ID from consultant__c  where Marrital_Status__c	='Married'
+6)select ID  from consultant__c where DOB__C > 2000
+7)select id , (select name from positions__r where name like 's%') from account 
+8)select Consultant__r.Id , Employer__r.name from  hiring__c where Employer__r.name = 'TV'
+9)select  Consultant__r.id , employer__r.id from hiring__c  where position__r.name='software Engineer'
+10)select consultant__r.id , count(employer__r.id) from hiring__c group by consultant__r.id
+11)SELECT DOB__c,  DOB__c FROM Consultan__c group by DOB__c order by count( DOB__c)
