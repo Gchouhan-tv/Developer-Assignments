@@ -18,7 +18,7 @@ public class OnlyContactMarkedPrimary {
       
       for (Account account : accountList) {
           for (Contact contact : account.Contacts) {
-              System.debug(contact);
+              //System.debug(contact);
               if (contact.Is_Primary__c) {
                   if (!contactIdToAccountIdMap.containsKey(contact.Id)) {
                     contact.Is_Primary__c = false;
